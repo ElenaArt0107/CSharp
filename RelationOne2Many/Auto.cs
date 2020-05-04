@@ -46,7 +46,7 @@ namespace RelationOne2Many
             }
         }
 
-        
+        // checking if there's enough places in the list for new objects if the number of items is defined
         public void AddPasagier(Passagier p)
         {
             Console.WriteLine("Pasagiers: \n");
