@@ -7,7 +7,7 @@ namespace DataTypeMethod
         static void Main(string[] args)
         {
             DateTime newjaar;
-            newjaar = new DateTime(); // yse the keyword NEW to save class propertis into the variable (as well as with Random)
+            newjaar = new DateTime(); // yse the keyword NEW to save class properties into the variable (as well as with Random)
             newjaar = new DateTime(2020, 1, 1);
 
             /////////////////////////          Change Format         ////////////////////////////////////////////////

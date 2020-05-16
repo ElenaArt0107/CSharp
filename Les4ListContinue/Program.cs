@@ -6,7 +6,7 @@ using Les4ListContinue;
 
 namespace Les4ListContinue
 {
-    enum Functie // enumeration
+    enum Functie // enumeration is a  refernce type (could be used as a type the same way as the primitive ones : int , string...)
     {
         Boekhouder,
         Lasser,
@@ -19,11 +19,11 @@ namespace Les4ListContinue
         Pion, // get the value one by one although u want to chage it
         Paard ,
         Loper,
-        Toren = 0, // get the value one by one although u want to chage it
+        Toren = 8, // get the value one by one although u want to chage it the next go into the raw after
         Koningin
 
     }
-    class Wernemer
+    class Wernemer // a refernce type (could be used as a type the same way as the primitive ones : int , string...)
     {
         public string naam;
         public string fnaam;
@@ -84,10 +84,10 @@ namespace Les4ListContinue
             // Enum is a claass, that has its own methods e.g. GetValues:
 
             Type funktieType = typeof(Functie); // convertion itself
-            //Enum.GetValues(funktieType); // not to have an exception we nshould convert to the type first:
+            //Enum.GetValues(funktieType); // not to have an exception we nshould convert from a class to the type first:
              
 
-            foreach (var item in Enum.GetValues(funktieType))
+            foreach (var item in Enum.GetValues(funktieType)) // it becomes a listm so we can pring it out zith a 'foreach'
             {
                 Console.WriteLine(item);
             }
@@ -100,9 +100,9 @@ namespace Les4ListContinue
             bij.Toon();
 
 
-            ////////////////////////////// FIFO //////////////////////////////////////////////////////////
-            ///////////////////////////// QUEUE //////////////////////////////////////////
-            /// using System.Collections.Generic;
+            ////////////////////////////// FIFO ///// first in first out/////////////in comparison zith list<T> = LIFO = last in first out////////////////////////////////////////
+            ///////////////////////////// QUEUE<T> //////////////////////////////////////////
+            /// using System.Collections.Generic; to all collections namespace
             //
             Console.WriteLine();
             Console.WriteLine("QUEUE Mthods");
@@ -126,7 +126,7 @@ namespace Les4ListContinue
             Console.WriteLine(t);
             Console.WriteLine($"Count: {transacties.Count}");
 
-            //Peek() returns the very first vakue but does not delete it:
+            //Peek() returns the very first value but does not delete it:
 
             int v = transacties.Peek();
             Console.WriteLine(v);
