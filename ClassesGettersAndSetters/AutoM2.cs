@@ -7,11 +7,19 @@ namespace ClassesGettersAndSetters
     class AutoM2
     {
 
+        public AutoM2(string merk, ConsoleColor kleur, double maxVersnelling, double huidigeVersnelling = 0)
+        {
+            //this._merk = merk;
+            //this._kleur = kleur;
+            //this._maxVersnelling = maxVersnelling;
 
+            // we can use here the featuresd as well as private variable
+            Merk = merk;
+            Kleur = kleur;
+            MaxVersnelling = maxVersnelling;
+        }
 
         private string _merk;
-
-
 
         public string Merk
         {
@@ -31,7 +39,7 @@ namespace ClassesGettersAndSetters
         public double MaxVersnelling
         {
             get { return _maxVersnelling; }
-            set { _maxVersnelling = value; }
+            private set { _maxVersnelling = value; }
         }
 
         private double _huidigeVersnelling;
