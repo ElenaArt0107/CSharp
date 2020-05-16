@@ -7,6 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <DockPanel Background="Beige">
+            <StackPanel Background="Lavender" DockPanel.Dock="Left" Width="200" Margin="0,0,0,0" Orientation="Vertical">
+                <WrapPanel Margin="10,150,0,0">
+                    <TextBlock Text="Search:    " FontSize="20" FontFamily ="Arial" 
+                           FontWeight="DemiBold">
+                    </TextBlock>
+                    <TextBox Width="80" Text="Dinner"></TextBox>
+                </WrapPanel>
+
+                <TextBlock Text="Give back" FontSize="20" FontFamily ="Arial" 
+                           FontWeight="Bold" Margin="20, 50, 10, 10"></TextBlock>
+                <CheckBox Content="Book" Height="20" FontSize="15" Margin="20, 5, 20, 5"/>
+                <CheckBox Content="CD" Height="20" FontSize="15" Margin="20, 5, 20, 5"/>
+                <CheckBox Content="DVD" Height="20" FontSize="15" Margin="20, 5, 20, 5"/>
+            </StackPanel>
+            <StackPanel Background="YellowGreen" DockPanel.Dock="Right" Width="200" 
+                       Margin="390,0,0,0"></StackPanel>
+
+        </DockPanel>
     </Grid>
 </Window>
